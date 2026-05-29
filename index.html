@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo · Bailando el Caos</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas class="bg-canvas" id="bgCanvas"></canvas>
+
+<div class="scene">
+<div class="book-container">
+
+<!-- ══════════════════════════════════════════
+     SPREAD 0 · PORTADA
+══════════════════════════════════════════ -->
+<div class="spread active anim-forward" data-spread="0">
+
+  <!-- Página izquierda: portada oscura -->
+  <div class="page-left cover-dark">
+    <div class="cover-art">
+      <div class="cover-art-circle" style="width:400px;height:400px;top:-100px;left:-100px;"></div>
+      <div class="cover-art-circle" style="width:280px;height:280px;bottom:-80px;right:-80px;border-color:rgba(196,149,58,0.08);"></div>
+      <div class="cover-art-circle" style="width:160px;height:160px;top:40%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.12);"></div>
+      <div style="position:absolute;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,149,58,0.08),transparent);left:30%;"></div>
+      <div style="position:absolute;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,149,58,0.06),transparent);left:70%;"></div>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:50px 36px;">
+      <div class="logo-circle">B</div>
+      <div class="brand-name">Bailando<br><em>el Caos</em></div>
+      <div class="cover-divider"></div>
+      <div class="cover-tagline">Colección Íntima · 2025</div>
+    </div>
+    <span class="page-num light">01</span>
+  </div>
+
+  <!-- Página derecha: presentación -->
+  <div class="page-right cover-right-page">
+    <div class="cover-art">
+      <div class="cover-art-circle" style="width:320px;height:320px;top:-80px;right:-80px;border-color:rgba(107,26,42,0.1);"></div>
+      <div class="cover-art-circle" style="width:200px;height:200px;bottom:-60px;left:-60px;border-color:rgba(107,26,42,0.07);"></div>
+    </div>
+    <div style="position:relative;z-index:1;text-align:center;padding:50px 36px;">
+      <div class="sect-label">Catálogo Oficial</div>
+      <div class="prod-name" style="font-size:38px;">Bailando<br><em>el Caos</em></div>
+      <div class="hr" style="margin:0 auto 24px;"></div>
+      <p style="font-size:11px;line-height:1.9;color:var(--text-mid);letter-spacing:0.04em;margin-bottom:28px;">
+        Lencería diseñada para quienes<br>
+        abrazan su sensualidad sin disculpas.<br>
+        Cada pieza, una declaración.
+      </p>
+      <div class="cover-tagline" style="color:var(--wine-light);">Seduce · Luxe · Secret · Brillos · Encaje · Essentials</div>
+    </div>
+    <span class="page-num">02</span>
+  </div>
+
+</div><!-- /spread 0 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 1 · BIENVENIDA / ÍNDICE
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="1">
+
+  <!-- Página izquierda: bienvenida -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Bienvenida</div>
+      <div class="prod-name" style="font-size:30px;">Una colección<br><em>para ti</em></div>
+      <div class="hr"></div>
+      <p style="font-size:11px;line-height:1.9;color:var(--text-mid);letter-spacing:0.03em;margin-bottom:24px;">
+        Cada colección nace de una emoción.<br>
+        Piezas que abrazan, que seducen,<br>
+        que cuentan tu historia sin palabras.
+      </p>
+      <ul class="feat-list">
+        <li>Telas de alta calidad</li>
+        <li>Diseños exclusivos</li>
+        <li>Tallas personalizadas</li>
+        <li>Envíos a todo el país</li>
+        <li>Atención personalizada</li>
+      </ul>
+      <div class="watermark">Caos</div>
+    </div>
+    <span class="page-num">03</span>
+  </div>
+
+  <!-- Página derecha: índice de colecciones -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Colecciones</div>
+      <div class="prod-name" style="font-size:28px;margin-bottom:24px;"><em>Índice</em></div>
+      <div class="toc-item"><span>Seduce</span><span style="color:var(--wine);">Pág. 3</span></div>
+      <div class="toc-item"><span>Luxe</span><span style="color:var(--wine);">Pág. 6</span></div>
+      <div class="toc-item"><span>Secret</span><span style="color:var(--wine);">Pág. 9</span></div>
+      <div class="toc-item"><span>Brillos</span><span style="color:var(--wine);">Pág. 11</span></div>
+      <div class="toc-item"><span>Encaje</span><span style="color:var(--wine);">Pág. 13</span></div>
+      <div class="toc-item"><span>Essentials</span><span style="color:var(--wine);">Pág. 15</span></div>
+      <div style="margin-top:28px;">
+        <div class="color-swatches">
+          <div class="swatch" style="background:#6B1A2A;" title="Vino"></div>
+          <div class="swatch" style="background:#A93347;" title="Rosa vino"></div>
+          <div class="swatch" style="background:#C4687A;" title="Blush"></div>
+          <div class="swatch" style="background:#2A1018;" title="Negro"></div>
+          <div class="swatch" style="background:#FAF4F2;" title="Blanco"></div>
+          <div class="swatch" style="background:#C4953A;" title="Dorado"></div>
+        </div>
+        <div class="swatch-label">Paleta de colecciones</div>
+      </div>
+    </div>
+    <span class="page-num">04</span>
+  </div>
+
+</div><!-- /spread 1 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 2 · SEDUCE — PORTADA DE COLECCIÓN
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="2">
+
+  <!-- Página izquierda: título de colección -->
+  <div class="page-left sect-big">
+    <div class="c-deco" style="width:300px;height:300px;top:-80px;left:-80px;"></div>
+    <div class="c-deco" style="width:200px;height:200px;bottom:-60px;right:-60px;"></div>
+    <div class="c-deco-ring" style="width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div class="c-deco-ring" style="width:260px;height:260px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div class="sect-big-title"><em>Seduce</em></div>
+    <div class="sect-big-sub">Colección · Íntima</div>
+    <div class="cover-divider" style="margin-top:24px;"></div>
+    <p style="font-size:10px;letter-spacing:0.08em;color:rgba(250,244,242,0.55);text-align:center;position:relative;z-index:1;margin-top:16px;line-height:1.8;">
+      Para quien sabe exactamente<br>lo que quiere.
+    </p>
+    <span class="page-num light">05</span>
+  </div>
+
+  <!-- Página derecha: imagen principal Seduce -->
+  <div class="page-right" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Seduce · Colección</div>
+      <div class="img-wrap" style="max-width:240px;">
+        <img src="fotos/Seduce.png" alt="Colección Seduce">
+        <div class="tag">Nuevo</div>
+      </div>
+      <div class="price-box">
+        <div class="price-row-label">Conjunto Completo</div>
+        <div class="price-fixed">$22.000</div>
+      </div>
+      <div class="watermark">Seduce</div>
+    </div>
+    <span class="page-num">06</span>
+  </div>
+
+</div><!-- /spread 2 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 3 · SEDUCE — BRASIER
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="3">
+
+  <!-- Página izquierda: imagen brasier Seduce -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label light" style="color:var(--wine-light);">Seduce · Brasier</div>
+      <div class="img-wrap">
+        <img src="fotos/BraSeduce.png" alt="Brasier Seduce">
+        <div class="tag">Colección</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge">
+          <span class="price-val">$16.000</span>
+          <span class="price-label">Precio especial</span>
+        </div>
+      </div>
+      <div class="watermark">Seduce</div>
+    </div>
+    <span class="page-num">07</span>
+  </div>
+
+  <!-- Página derecha: precios brasier Seduce -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Seduce · Precios</div>
+      <div class="prod-name">Brasier<br><em>Seduce</em></div>
+      <div class="hr"></div>
+      <p style="font-size:10px;color:var(--text-light);letter-spacing:0.05em;margin-bottom:20px;line-height:1.7;">
+        Disponible en azul y rojo.<br>
+        Diseño que abraza y realza.
+      </p>
+      <div class="price-box">
+        <div class="price-item">
+          <div class="price-row-label">Brasier Azul / Rojo</div>
+          <div class="price-inline">
+            <span class="price-final">$16.000</span>
+            <span class="price-orig">$18.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $2.000</div>
+        </div>
+      </div>
+      <div class="color-swatches" style="margin-top:20px;">
+        <div class="swatch" style="background:#1A3A6B;" title="Azul"></div>
+        <div class="swatch" style="background:#8B1A1A;" title="Rojo"></div>
+      </div>
+      <div class="swatch-label">Colores disponibles</div>
+    </div>
+    <span class="page-num">08</span>
+  </div>
+
+</div><!-- /spread 3 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 4 · SEDUCE — TANGA & CONJUNTO
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="4">
+
+  <!-- Página izquierda: conjunto Seduce -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label" style="color:var(--wine-light);">Seduce · Conjunto</div>
+      <div class="img-wrap">
+        <img src="fotos/ConjuntoSeduce.png" alt="Conjunto Seduce">
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge">
+          <span class="price-val">$22.000</span>
+          <span class="price-label">Conjunto completo</span>
+        </div>
+      </div>
+      <div class="watermark">Seduce</div>
+    </div>
+    <span class="page-num">09</span>
+  </div>
+
+  <!-- Página derecha: precios tanga + conjunto -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Seduce · Tanga & Conjunto</div>
+      <div class="prod-name">Tanga &<br><em>Conjunto</em></div>
+      <div class="hr"></div>
+      <div class="price-box">
+        <div class="price-item">
+          <div class="price-row-label">Tanga Seduce</div>
+          <div class="price-fixed" style="font-size:28px;">$10.000</div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="price-item">
+          <div class="price-row-label">Conjunto Completo</div>
+          <div class="price-fixed" style="font-size:28px;">$22.000</div>
+          <p style="font-size:9px;color:var(--text-light);margin-top:4px;letter-spacing:0.05em;">Brasier + Tanga</p>
+        </div>
+      </div>
+      <p style="font-size:10px;color:var(--text-light);letter-spacing:0.04em;margin-top:18px;line-height:1.7;">
+        El conjunto incluye brasier y tanga.<br>
+        Precio especial al llevar las dos piezas.
+      </p>
+    </div>
+    <span class="page-num">10</span>
+  </div>
+
+</div><!-- /spread 4 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 5 · LUXE — PORTADA DE COLECCIÓN
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="5">
+
+  <!-- Página izquierda: título Luxe -->
+  <div class="page-left sect-big">
+    <div class="c-deco" style="width:280px;height:280px;top:-70px;right:-70px;"></div>
+    <div class="c-deco" style="width:180px;height:180px;bottom:-50px;left:-50px;"></div>
+    <div class="c-deco-ring" style="width:380px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div class="c-deco-ring" style="width:240px;height:240px;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div class="sect-big-title"><em>Luxe</em></div>
+    <div class="sect-big-sub">Colección · Premium</div>
+    <div class="cover-divider" style="margin-top:24px;"></div>
+    <p style="font-size:10px;letter-spacing:0.08em;color:rgba(250,244,242,0.55);text-align:center;position:relative;z-index:1;margin-top:16px;line-height:1.8;">
+      Elegancia que se siente<br>desde adentro.
+    </p>
+    <span class="page-num light">11</span>
+  </div>
+
+  <!-- Página derecha: imagen Luxe Pastel -->
+  <div class="page-right" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Luxe · Colección</div>
+      <div class="img-wrap" style="max-width:240px;">
+        <img src="fotos/LuxePastel.png" alt="Brasieres Luxe Pastel">
+        <div class="tag gold">Premium</div>
+      </div>
+      <div class="price-box gold-border">
+        <div class="price-row-label">Brasier Luxe</div>
+        <div class="price-inline">
+          <span class="price-final">$19.000</span>
+          <span class="price-orig">$20.000</span>
+        </div>
+        <div class="savings-badge">Ahorras $1.000</div>
+      </div>
+      <div class="watermark">Luxe</div>
+    </div>
+    <span class="page-num">12</span>
+  </div>
+
+</div><!-- /spread 5 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 6 · LUXE — BRASIER
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="6">
+
+  <!-- Página izquierda: imagen brasier Luxe -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label" style="color:var(--wine-light);">Luxe · Brasier</div>
+      <div class="img-wrap">
+        <img src="fotos/BraLuxe.png" alt="Brasier Luxe">
+        <div class="tag gold">Luxe</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge" style="background:linear-gradient(135deg,var(--gold) 0%,#B8841E 100%);">
+          <span class="price-val" style="color:#2A1018;">$19.000</span>
+          <span class="price-label" style="color:rgba(42,16,24,0.7);">Precio especial</span>
+        </div>
+      </div>
+      <div class="watermark">Luxe</div>
+    </div>
+    <span class="page-num">13</span>
+  </div>
+
+  <!-- Página derecha: precios brasier Luxe -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Luxe · Precios</div>
+      <div class="prod-name">Brasier<br><em>Luxe</em></div>
+      <div class="hr gold"></div>
+      <p style="font-size:10px;color:var(--text-light);letter-spacing:0.05em;margin-bottom:20px;line-height:1.7;">
+        Acabados premium.<br>
+        Diseño que dura y enamora.
+      </p>
+      <div class="price-box gold-border">
+        <div class="price-item">
+          <div class="price-row-label">Brasier Luxe</div>
+          <div class="price-inline">
+            <span class="price-final">$19.000</span>
+            <span class="price-orig">$20.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $1.000</div>
+        </div>
+      </div>
+    </div>
+    <span class="page-num">14</span>
+  </div>
+
+</div><!-- /spread 6 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 7 · LUXE — TANGA & CONJUNTO
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="7">
+
+  <!-- Página izquierda: conjunto Luxe -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label" style="color:var(--wine-light);">Luxe · Conjunto</div>
+      <div class="img-wrap">
+        <img src="fotos/conjuntoLuxe.png" alt="Conjunto Luxe">
+        <div class="tag gold">Premium</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge" style="background:linear-gradient(135deg,var(--gold) 0%,#B8841E 100%);">
+          <span class="price-val" style="color:#2A1018;">$26.000</span>
+          <span class="price-label" style="color:rgba(42,16,24,0.7);">Conjunto completo</span>
+        </div>
+      </div>
+      <div class="watermark">Luxe</div>
+    </div>
+    <span class="page-num">15</span>
+  </div>
+
+  <!-- Página derecha: precios tanga + conjunto Luxe -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Luxe · Tanga & Conjunto</div>
+      <div class="prod-name">Tanga &<br><em>Conjunto</em></div>
+      <div class="hr gold"></div>
+      <div class="price-box gold-border">
+        <div class="price-item">
+          <div class="price-row-label">Tanga Luxe</div>
+          <div class="price-inline">
+            <span class="price-final">$6.000</span>
+            <span class="price-orig">$7.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $1.000</div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="price-item">
+          <div class="price-row-label">Conjunto Completo</div>
+          <div class="price-inline">
+            <span class="price-final">$26.000</span>
+            <span class="price-orig">$27.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $1.000</div>
+        </div>
+      </div>
+    </div>
+    <span class="page-num">16</span>
+  </div>
+
+</div><!-- /spread 7 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 8 · SECRET — PORTADA DE COLECCIÓN
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="8">
+
+  <!-- Página izquierda: título Secret -->
+  <div class="page-left sect-big" style="background:linear-gradient(145deg,#1A1A2E,#2D2D44,#1A1A2E);">
+    <div class="c-deco" style="width:260px;height:260px;top:-60px;left:-60px;background:rgba(250,244,242,0.03);"></div>
+    <div class="c-deco-ring" style="width:360px;height:360px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(250,244,242,0.06);"></div>
+    <div class="c-deco-ring" style="width:220px;height:220px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(250,244,242,0.04);"></div>
+    <div class="sect-big-title" style="color:#FAF4F2;"><em>Secret</em></div>
+    <div class="sect-big-sub" style="color:rgba(250,244,242,0.5);">Colección · Misteriosa</div>
+    <div class="cover-divider" style="margin-top:24px;background:linear-gradient(to right,transparent,rgba(250,244,242,0.3),transparent);"></div>
+    <p style="font-size:10px;letter-spacing:0.08em;color:rgba(250,244,242,0.4);text-align:center;position:relative;z-index:1;margin-top:16px;line-height:1.8;">
+      Lo que no se dice,<br>se lleva puesto.
+    </p>
+    <span class="page-num light">17</span>
+  </div>
+
+  <!-- Página derecha: imagen Secret -->
+  <div class="page-right" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Secret · Colección</div>
+      <div class="img-wrap" style="max-width:240px;">
+        <img src="fotos/secret.png" alt="Colección Secret">
+        <div class="tag">Exclusivo</div>
+      </div>
+      <div class="price-box">
+        <div class="price-row-label">Brasier Secret</div>
+        <div class="price-fixed">$16.000</div>
+      </div>
+      <div class="watermark">Secret</div>
+    </div>
+    <span class="page-num">18</span>
+  </div>
+
+</div><!-- /spread 8 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 9 · SECRET — BRASIER (DETALLE)
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="9">
+
+  <!-- Página izquierda: brasier Secret -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label" style="color:var(--wine-light);">Secret · Brasier</div>
+      <div class="img-wrap">
+        <img src="fotos/BraSecret.png" alt="Brasier Secret">
+        <div class="tag">Blanco & Negro</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge">
+          <span class="price-val">$16.000</span>
+          <span class="price-label">Precio fijo</span>
+        </div>
+      </div>
+      <div class="watermark">Secret</div>
+    </div>
+    <span class="page-num">19</span>
+  </div>
+
+  <!-- Página derecha: galería + precios Secret -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Secret · Precios</div>
+      <div class="prod-name">Brasier<br><em>Secret</em></div>
+      <div class="hr"></div>
+      <div class="img-wrap" style="max-width:200px;">
+        <img src="fotos/secrets.png" alt="Secret variantes" style="height:180px;">
+      </div>
+      <div class="price-box" style="margin-top:14px;">
+        <div class="price-item">
+          <div class="price-row-label">Brasier Blanco / Negro</div>
+          <div class="price-fixed" style="font-size:30px;">$16.000</div>
+          <p style="font-size:9px;color:var(--text-light);margin-top:6px;letter-spacing:0.05em;">Precio fijo · Sin descuento</p>
+        </div>
+      </div>
+      <div class="color-swatches" style="margin-top:16px;">
+        <div class="swatch" style="background:#FAF4F2;border-color:rgba(107,26,42,0.3);" title="Blanco"></div>
+        <div class="swatch" style="background:#1A1A1A;" title="Negro"></div>
+      </div>
+      <div class="swatch-label">Blanco y Negro</div>
+    </div>
+    <span class="page-num">20</span>
+  </div>
+
+</div><!-- /spread 9 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 10 · BRILLOS — PORTADA DE COLECCIÓN
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="10">
+
+  <!-- Página izquierda: título Brillos -->
+  <div class="page-left sect-big" style="background:linear-gradient(145deg,#3D1A0A,#6B2E10,#3D1A0A);">
+    <div class="c-deco" style="width:300px;height:300px;top:-80px;right:-80px;background:rgba(196,149,58,0.06);"></div>
+    <div class="c-deco-ring" style="width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.12);"></div>
+    <div class="c-deco-ring" style="width:250px;height:250px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.08);"></div>
+    <div class="sect-big-title"><em>Brillos</em></div>
+    <div class="sect-big-sub">Colección · Brillante</div>
+    <div class="cover-divider" style="margin-top:24px;"></div>
+    <p style="font-size:10px;letter-spacing:0.08em;color:rgba(250,244,242,0.55);text-align:center;position:relative;z-index:1;margin-top:16px;line-height:1.8;">
+      Brilla como mereces.<br>Siéntelo en tu piel.
+    </p>
+    <span class="page-num light">21</span>
+  </div>
+
+  <!-- Página derecha: imagen Brillos -->
+  <div class="page-right" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Brillos · Colección</div>
+      <div class="img-wrap" style="max-width:240px;">
+        <img src="fotos/Brillos.png" alt="Tanga Brillos">
+        <div class="tag gold">Brillante</div>
+      </div>
+      <div class="price-box gold-border">
+        <div class="price-row-label">Tanga Brillos</div>
+        <div class="price-inline">
+          <span class="price-final">$10.000</span>
+          <span class="price-orig">$12.000</span>
+        </div>
+        <div class="savings-badge">Ahorras $2.000</div>
+      </div>
+      <div class="watermark">Brillos</div>
+    </div>
+    <span class="page-num">22</span>
+  </div>
+
+</div><!-- /spread 10 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 11 · BRILLOS — TANGAS BRILLOS
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="11">
+
+  <!-- Página izquierda: set Brillos -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label" style="color:var(--wine-light);">Brillos · Tangas</div>
+      <div class="img-wrap">
+        <img src="fotos/SetBrillos.png" alt="Tangas Brillos">
+        <div class="tag gold">Brillante</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge" style="background:linear-gradient(135deg,var(--gold) 0%,#B8841E 100%);">
+          <span class="price-val" style="color:#2A1018;">$10.000</span>
+          <span class="price-label" style="color:rgba(42,16,24,0.7);">Tanga Brillos</span>
+        </div>
+      </div>
+      <div class="watermark">Brillos</div>
+    </div>
+    <span class="page-num">23</span>
+  </div>
+
+  <!-- Página derecha: precios Brillos -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Brillos · Precios</div>
+      <div class="prod-name">Tangas<br><em>Brillos</em></div>
+      <div class="hr gold"></div>
+      <div class="price-box gold-border">
+        <div class="price-item">
+          <div class="price-row-label">Tanga Brillos</div>
+          <div class="price-inline">
+            <span class="price-final">$10.000</span>
+            <span class="price-orig">$12.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $2.000</div>
+        </div>
+      </div>
+      <div class="color-swatches" style="margin-top:18px;">
+        <div class="swatch" style="background:#5C1A2A;" title="Vino tinto"></div>
+        <div class="swatch" style="background:#8B1A2A;" title="Rojo oscuro"></div>
+      </div>
+      <div class="swatch-label">Tonos vino tinto</div>
+    </div>
+    <span class="page-num">24</span>
+  </div>
+
+</div><!-- /spread 11 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 12 · ENCAJE — PORTADA DE COLECCIÓN
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="12">
+
+  <!-- Página izquierda: título Encaje -->
+  <div class="page-left sect-big" style="background:linear-gradient(145deg,#2A0A1E,#4A1535,#2A0A1E);">
+    <div class="c-deco" style="width:280px;height:280px;bottom:-70px;left:-70px;background:rgba(196,149,58,0.04);"></div>
+    <div class="c-deco-ring" style="width:380px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.1);"></div>
+    <div class="c-deco-ring" style="width:230px;height:230px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.07);"></div>
+    <div class="sect-big-title"><em>Encaje</em></div>
+    <div class="sect-big-sub">Colección · Delicada</div>
+    <div class="cover-divider" style="margin-top:24px;"></div>
+    <p style="font-size:10px;letter-spacing:0.08em;color:rgba(250,244,242,0.55);text-align:center;position:relative;z-index:1;margin-top:16px;line-height:1.8;">
+      Delicadeza que<br>no pasa desapercibida.
+    </p>
+    <span class="page-num light">25</span>
+  </div>
+
+  <!-- Página derecha: imagen Encaje -->
+  <div class="page-right" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Encaje · Colección</div>
+      <div class="img-wrap" style="max-width:240px;">
+        <img src="fotos/Encaje.png" alt="Colección Encaje">
+        <div class="tag">Delicado</div>
+      </div>
+      <div class="price-box">
+        <div class="price-row-label">Tanga Encaje</div>
+        <div class="price-inline">
+          <span class="price-final">$8.000</span>
+          <span class="price-orig">$10.000</span>
+        </div>
+        <div class="savings-badge">Ahorras $2.000</div>
+      </div>
+      <div class="watermark">Encaje</div>
+    </div>
+    <span class="page-num">26</span>
+  </div>
+
+</div><!-- /spread 12 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 13 · ENCAJE — PRODUCTOS
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="13">
+
+  <!-- Página izquierda: encaje abierto -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label" style="color:var(--wine-light);">Encaje · Abierto</div>
+      <div class="img-wrap">
+        <img src="fotos/encajeAbierto.png" alt="Encaje Abierto">
+        <div class="tag">Especial</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div class="img-price-badge">
+          <span class="price-val">$10.000</span>
+          <span class="price-label">Encaje abierto</span>
+        </div>
+      </div>
+      <div class="watermark">Encaje</div>
+    </div>
+    <span class="page-num">27</span>
+  </div>
+
+  <!-- Página derecha: precios Encaje -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Encaje · Precios</div>
+      <div class="prod-name">Tanga &<br><em>Encaje Abierto</em></div>
+      <div class="hr"></div>
+      <div class="price-box">
+        <div class="price-item">
+          <div class="price-row-label">Tanga Encaje</div>
+          <div class="price-inline">
+            <span class="price-final">$8.000</span>
+            <span class="price-orig">$10.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $2.000</div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="price-item">
+          <div class="price-row-label">Encaje Abierto</div>
+          <div class="price-inline">
+            <span class="price-final">$10.000</span>
+            <span class="price-orig">$12.000</span>
+          </div>
+          <div class="savings-badge">Ahorras $2.000</div>
+        </div>
+      </div>
+      <p style="font-size:10px;color:var(--text-light);letter-spacing:0.04em;margin-top:18px;line-height:1.7;">
+        Piezas únicas en encaje fino.<br>
+        Diseño delicado y atrevido.
+      </p>
+    </div>
+    <span class="page-num">28</span>
+  </div>
+
+</div><!-- /spread 13 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 14 · ESSENTIALS — PORTADA DE COLECCIÓN
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="14">
+
+  <!-- Página izquierda: título Essentials -->
+  <div class="page-left sect-big" style="background:linear-gradient(145deg,#1E0A0A,#3D1515,#1E0A0A);">
+    <div class="c-deco" style="width:260px;height:260px;top:-60px;right:-60px;background:rgba(196,149,58,0.04);"></div>
+    <div class="c-deco" style="width:180px;height:180px;bottom:-50px;left:-50px;background:rgba(196,149,58,0.03);"></div>
+    <div class="c-deco-ring" style="width:360px;height:360px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.09);"></div>
+    <div class="c-deco-ring" style="width:220px;height:220px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.06);"></div>
+    <div class="sect-big-title"><em>Essentials</em></div>
+    <div class="sect-big-sub">Colección · Básicos Premium</div>
+    <div class="cover-divider" style="margin-top:24px;"></div>
+    <p style="font-size:10px;letter-spacing:0.08em;color:rgba(250,244,242,0.55);text-align:center;position:relative;z-index:1;margin-top:16px;line-height:1.8;">
+      Lo esencial,<br>con todo el estilo.
+    </p>
+    <span class="page-num light">29</span>
+  </div>
+
+  <!-- Página derecha: imagen Essentials -->
+  <div class="page-right" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Essentials · Colección</div>
+      <div class="img-wrap" style="max-width:240px;">
+        <img src="fotos/braEssentials.png" alt="Brasier Essentials">
+        <div class="tag">Básico Premium</div>
+      </div>
+      <div class="price-box">
+        <div class="price-row-label">Brasier Essentials</div>
+        <div class="price-fixed">$16.000</div>
+        <p style="font-size:9px;color:var(--text-light);margin-top:4px;letter-spacing:0.05em;">Precio fijo · Sin descuento</p>
+      </div>
+      <div class="watermark">Essentials</div>
+    </div>
+    <span class="page-num">30</span>
+  </div>
+
+</div><!-- /spread 14 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 15 · ESSENTIALS — TANGAS & PROPIEDAD TÓXICO
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="15">
+
+  <!-- Página izquierda: conjunto Essentials + Propiedad Tóxico -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad-sm">
+      <div class="sect-label" style="color:var(--wine-light);">Essentials · Tangas</div>
+      <div class="img-duo">
+        <div>
+          <img src="fotos/conjuntoEssentials.png" alt="Tanga Essentials">
+        </div>
+        <div>
+          <img src="fotos/PropiedadToxico.png" alt="Propiedad Tóxico">
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:8px;">
+        <div class="img-price-badge" style="flex:1;text-align:center;">
+          <span class="price-val" style="font-size:18px;">$5.000</span>
+          <span class="price-label">Tanga</span>
+        </div>
+        <div class="img-price-badge" style="flex:1;text-align:center;">
+          <span class="price-val" style="font-size:18px;">$5.000</span>
+          <span class="price-label">Prop. Tóxico</span>
+        </div>
+      </div>
+      <div class="watermark">Essentials</div>
+    </div>
+    <span class="page-num">31</span>
+  </div>
+
+  <!-- Página derecha: precios Essentials -->
+  <div class="page-right" style="background:linear-gradient(160deg,#F5EDE8 0%,#EDD8D0 100%);">
+    <div class="page-pad">
+      <div class="sect-label">Essentials · Precios</div>
+      <div class="prod-name">Tangas<br><em>Essentials</em></div>
+      <div class="hr"></div>
+      <div class="price-box">
+        <div class="price-item">
+          <div class="price-row-label">Tanga Essentials</div>
+          <div class="price-fixed" style="font-size:30px;">$5.000</div>
+          <p style="font-size:9px;color:var(--text-light);margin-top:4px;letter-spacing:0.05em;">Precio fijo · Sin descuento</p>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="price-item">
+          <div class="price-row-label">Propiedad Tóxico</div>
+          <div class="price-fixed" style="font-size:30px;">$5.000</div>
+          <p style="font-size:9px;color:var(--text-light);margin-top:4px;letter-spacing:0.05em;">Precio fijo · Sin descuento</p>
+        </div>
+      </div>
+      <p style="font-size:10px;color:var(--text-light);letter-spacing:0.04em;margin-top:18px;line-height:1.7;">
+        Básicos que no pueden faltar.<br>
+        Cómodos, sensuales y accesibles.
+      </p>
+    </div>
+    <span class="page-num">32</span>
+  </div>
+
+</div><!-- /spread 15 -->
+
+<!-- ══════════════════════════════════════════
+     SPREAD 16 · CONTRAPORTADA / CONTACTO
+══════════════════════════════════════════ -->
+<div class="spread" data-spread="16">
+
+  <!-- Página izquierda: contacto -->
+  <div class="page-left" style="background:linear-gradient(160deg,#FAF4F2 0%,#F5EDE8 100%);">
+    <div class="page-pad" style="align-items:center;">
+      <div class="sect-label" style="text-align:center;">Contáctanos</div>
+      <div class="prod-name" style="text-align:center;font-size:28px;margin-bottom:24px;">
+        Hablemos,<br><em>te esperamos</em>
+      </div>
+      <div class="hr" style="margin:0 auto 28px;"></div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div>
+          <div style="font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">WhatsApp</div>
+          <div style="font-size:13px;font-weight:600;color:var(--text-dark);letter-spacing:0.05em;">+57 300 000 0000</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📸</div>
+        <div>
+          <div style="font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Instagram</div>
+          <div style="font-size:13px;font-weight:600;color:var(--text-dark);letter-spacing:0.05em;">@bailandoelcaos</div>
+        </div>
+      </div>
+
+      <div class="contact-item" style="border-bottom:none;">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div style="font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);margin-bottom:3px;">Email</div>
+          <div style="font-size:12px;font-weight:600;color:var(--text-dark);letter-spacing:0.03em;">bailandoelcaos@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="watermark">Caos</div>
+    </div>
+    <span class="page-num">33</span>
+  </div>
+
+  <!-- Página derecha: contraportada oscura -->
+  <div class="page-right cover-dark">
+    <div class="cover-art">
+      <div class="cover-art-circle" style="width:380px;height:380px;top:-100px;right:-100px;"></div>
+      <div class="cover-art-circle" style="width:240px;height:240px;bottom:-70px;left:-70px;border-color:rgba(196,149,58,0.08);"></div>
+      <div class="cover-art-circle" style="width:140px;height:140px;top:40%;left:50%;transform:translate(-50%,-50%);border-color:rgba(196,149,58,0.12);"></div>
+      <div style="position:absolute;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,149,58,0.07),transparent);left:35%;"></div>
+      <div style="position:absolute;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(196,149,58,0.05),transparent);left:65%;"></div>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:50px 36px;text-align:center;">
+      <div class="logo-circle" style="margin-bottom:24px;">B</div>
+      <div class="brand-name" style="font-size:32px;">Bailando<br><em>el Caos</em></div>
+      <div class="cover-divider"></div>
+      <div class="cover-tagline">Colección Íntima · 2025</div>
+      <p style="font-size:10px;color:rgba(250,244,242,0.4);letter-spacing:0.08em;margin-top:28px;line-height:1.9;">
+        Gracias por ser parte<br>de este caos tan bonito.
+      </p>
+    </div>
+    <span class="page-num light">34</span>
+  </div>
+
+</div><!-- /spread 16 -->
+
+</div><!-- /book-container -->
+</div><!-- /scene -->
+
+<!-- ══════════════════════════════════════════
+     NAVEGACIÓN
+══════════════════════════════════════════ -->
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>&#8592;</button>
+  <div>
+    <div class="page-indicator" id="pageLabel">Portada · 1 / 17</div>
+    <div class="page-dots" id="dots"></div>
+  </div>
+  <button class="nav-btn" id="nextBtn" onclick="navigate(1)">&#8594;</button>
+</div>
+
+<script src="catalog.js"></script>
+</body>
+</html>
